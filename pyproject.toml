@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mini-llm-router"
+version = "0.1.0"
+description = "A small LLM gateway that routes by task type, with caching and cost/latency logging."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "awf-cpu" }]
+dependencies = []
+
+[project.optional-dependencies]
+yaml = ["pyyaml>=6.0"]
+openai = ["openai>=1.0"]
+ollama = ["requests>=2.28"]
+dev = ["pytest>=7.4"]
+
+[tool.setuptools]
+packages = ["router"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]

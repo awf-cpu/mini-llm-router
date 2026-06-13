@@ -1,0 +1,6 @@
+pytest>=7.4
+
+# Optional extras (not required for offline use or tests):
+#   pip install pyyaml    # enables YAML config files (JSON works without it)
+#   pip install openai    # enables the OpenAI provider
+#   pip install requests  # enables the local Ollama provider

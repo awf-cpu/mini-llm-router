@@ -1,0 +1,19 @@
+{
+  "enabled_providers": ["mock"],
+  "default_task": "default",
+  "routes": {
+    "classify": {
+      "provider": "mock",
+      "model": "small",
+      "fallbacks": [{ "provider": "mock", "model": "tiny" }]
+    },
+    "cheap": { "provider": "mock", "model": "small" },
+    "code": {
+      "provider": "mock",
+      "model": "large",
+      "fallbacks": [{ "provider": "mock", "model": "small" }]
+    },
+    "longform": { "provider": "mock", "model": "large" },
+    "default": { "provider": "mock", "model": "small" }
+  }
+}
